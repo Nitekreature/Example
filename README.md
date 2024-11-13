@@ -129,7 +129,9 @@ To conclude, there are 8 functions you need to know for daily git use:
 `git commit` - commits staged changes
 `git push` - pushes local changes to the remote repo.
 
-Now this list, is not exhaustive by any means, we haven't covered branches, PRs, initializing repositories, multiple remotes, and a host of other topics. If you would like to learn more, there is a wonderful set of tutorials and a comprehensive wiki found at https://git-scm.com/doc 
+Now this list, is not exhaustive by any means, we haven't covered branches, PRs, initializing repositories, multiple remotes, and a host of other topics. If you would like to learn more, there is a wonderful set of tutorials and a comprehensive wiki found at [https://git-scm.com/doc](https://git-scm.com/doc)
+
+The slides accompanying this presentation can be found [here](https://docs.google.com/presentation/d/1m79pmaxq_Kb8-SeMMtA7E4FZiHdPz4OXNoXgtvHSPG0/edit?usp=sharing)
 
 ## Acknowledgments
 
