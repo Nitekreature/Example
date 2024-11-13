@@ -23,10 +23,6 @@ Now, go back to your terminal and type `git clone` and paste the copied url. It 
 
 The repo should now be accessible in the `/Example` folder.
 
-### Fetching and Pulling
-
-`git fetch` is an important command for making sure your repo is up to date with the remote. Always run it before committing changes, as you do not want to have to resolve conflicts that may arise otherwise.
-
 ### Repo Status
 
 A very helpful command for checking the state of your repo is the `git status` command. This shows information about new/modified files, branches, whether your local repo is behind/ahead the remote, and more.
@@ -43,17 +39,80 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-A key line to note is `Your branch is up to date with 'origin/main'. This means you are up to date with the remote branch
+A key line to note is `Your branch is up to date with 'origin/main'`. This means you are up to date with the remote branch, which you can check by running the `fetch` command in the next section.
 
-### Pulling
+### Fetching and Pulling
 
-Now that your local repository is set up, before making any changes you __always__ want to make sure it's up to date with the remote. To do this, execute the following commands:
+`git fetch` is an important command for making sure your repo is up to date with the remote. Always run it before making changes, as you do not want to have to resolve conflicts that may arise otherwise. Always check ` git status` after fetching to see the status of the repo:
 ```git
-git fetch
-git pull
+C:\Workspace\Projects\Example>git fetch
+
+C:\Workspace\Projects\Example>git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+```
+Here, my local branch is behind my remote, and needs to be brought up to date before I make any more changes. This can be done with `git pull`.
+```git
+C:\Workspace\Projects\Example>git pull
+Updating 416b2f7..04fc882
+Fast-forward
+ README.md | 48 ++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 42 insertions(+), 6 deletions(-)
 ```
 
+To summarize, always `fetch`, check `status`, and `pull` before making changes.
+
 ### Pushing
+
+Now, assuming your local repo is all up to date, you can make changes to the repo. This can be adding a file, modifying a file, or deleting one. For this example, I've made some changes to the README.
+
+As always, I'm going to check the state of the repo with `git status`
+```git
+C:\Workspace\Projects\Example>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+I have a modified file, which I can ready for commiting by staging it with `git add README.md`. The `add` command allows you control over what changes you commit, which is helpful for more complicated projects.
+```git
+C:\Workspace\Projects\Example>git add README.md
+
+C:\Workspace\Projects\Example>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+```
+
+Now that your changes are staged, you can make a commit by running `git commit -m "Enter message here"`. Replace the message text with something descriptive about the commit, usually just an explanation of what the changes are.
+
+
+
+### Summary
+
+To conclude, there are 8 functions you need to know for daily git use:
+`Fork` - creates your own copy of a repo that you are free to modify
+`git clone` - makes a local copy of a remote repo
+`git status` - shows the state of your local repo
+`git fetch` - updates information about the remote repo
+`git pull` - grabs and merges remote changes into your local repo
+`git add` - stages files for commit
+`git commit` - commits staged changes
+`git push` - pushes local changes to the remote repo.
+
+Now this list, is not exhaustive by any means, we haven't covered branches, initializing repositories, multiple remotes, and a host of other topics. If you would like to learn more, there is a wonderful set of tutorials and a comprehensive wiki found at https://git-scm.com/doc 
 
 ## Acknowledgments
 
