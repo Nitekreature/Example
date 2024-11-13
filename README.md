@@ -97,8 +97,25 @@ Changes to be committed:
 ```
 
 Now that your changes are staged, you can make a commit by running `git commit -m "Enter message here"`. Replace the message text with something descriptive about the commit, usually just an explanation of what the changes are.
+```git
+C:\Workspace\Projects\Example>git commit -m "Updated README"
+[main 6942ae4] Updated README
+ 1 file changed, 68 insertions(+), 9 deletions(-)
+ ```
 
-
+We're ready for the last step, to make your changes permanent on the remote repo. To do this, run `git push`
+```git
+C:\Workspace\Projects\Example>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.33 KiB | 2.33 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/tro2/Example.git
+   04fc882..6942ae4  main -> main
+```
 
 ### Summary
 
