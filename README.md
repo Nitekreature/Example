@@ -27,7 +27,7 @@ The repo should now be accessible in the `/Example` folder.
 
 A very helpful command for checking the state of your repo is the `git status` command. This shows information about new/modified files, branches, whether your local repo is behind/ahead the remote, and more.
 It can be checked by running `git status`. This is an example output of the status command as I'm updating this README file:
-```git
+```diff
 C:\Workspace\Projects\Example>git status
 On branch main
 Your branch is up to date with 'origin/main'.
